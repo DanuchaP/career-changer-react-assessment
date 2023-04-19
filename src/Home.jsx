@@ -29,10 +29,6 @@ const Home = () => {
   const [sector, setSector] = useState("");
   const [roleSector, setRoleSector] = useState("React - Assessment");
 
-  const setRole = (position) => {
-    setSector(position);
-  };
-
   const addEmployees = (newEmployee) => {
     let prevEmployee = Emp;
     prevEmployee = [...prevEmp, newEmployee]
@@ -59,10 +55,10 @@ const Home = () => {
       <h1>Generation Thailand<br></br>{roleSector}</h1>
       <button onClick={() => {
         setRoleSector("Home - User Sector")
-        setRole("User")}}>User Home Sector</button>
+        setSector("User")}}>User Home Sector</button>
       <button onClick={() => {
         setRoleSector("Home - Admin Sector")
-        setRole("Admin")}}>Admin Home Sector</button>
+        setSector("Admin")}}>Admin Home Sector</button>
         {role()}
     </div>
   );
